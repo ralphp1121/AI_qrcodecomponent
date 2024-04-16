@@ -20,6 +20,7 @@ body, h1, p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 300px;
+    width: 80%; /* Makes the width responsive to the viewport */
     margin: auto;
     border-radius: 20px; /* This gives the container rounded corners */
   }
@@ -52,3 +53,25 @@ body, h1, p {
   .attribution a { 
     color: hsl(228, 45%, 44%);
   }
+
+  /* Responsive styles for mobile screens */
+@media (max-width: 375px) {
+  .qr-box {
+    padding: 1em; /* Decreased padding for mobile view */
+    max-width: none; /* Removes max-width on mobile to allow width: 80% to take effect */
+  }
+
+  h1 {
+    font-size: 16px; /* Slightly smaller font for the heading on mobile */
+  }
+
+  p {
+    font-size: 14px; /* Slightly smaller font for the paragraph on mobile */
+  }
+
+  /* Optionally, adjust the attribution font size and padding for mobile as well */
+  .attribution {
+    font-size: 9px;
+    bottom: 5px; /* Less space from the bottom on mobile */
+  }
+}
